@@ -18,13 +18,7 @@ cargo run
 ## Install (from GitHub release)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/hexajohnny/f2bs/main/install.sh | sh
-```
-
-## Release Packaging
-
-```bash
-scripts/package-release.sh
+curl -fsSL https://raw.githubusercontent.com/hexajohnny/f2bs/main/install.sh | sudo sh
 ```
 
 ## Controls
@@ -39,7 +33,7 @@ scripts/package-release.sh
 ## Notes
 
 - Requires `fail2ban-client` on PATH.
-- Uses the current user's permissions for unban operations.
+- Requires root privileges for unban operations. Run with `sudo f2bs`.
 
 ## License
 
