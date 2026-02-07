@@ -2,6 +2,8 @@
 
 A focused, terminal UI for scanning Fail2Ban jails and unbanning IPs.
 
+![Example](misc/example.png)
+
 ## Features
 
 - Two-panel TUI (jails on the left, banned IPs on the right)
