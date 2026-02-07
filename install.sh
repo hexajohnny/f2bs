@@ -23,6 +23,17 @@ if [ -z "${asset_url}" ]; then
 fi
 
 pick_install_dir() {
+  for preferred in /usr/local/bin /usr/bin /bin; do
+    case ":$PATH:" in
+      *":$preferred:"*)
+        if [ -d "$preferred" ] && ( [ -w "$preferred" ] || [ "$(id -u)" -eq 0 ] ); then
+          printf "%s" "$preferred"
+          return
+        fi
+        ;;
+    esac
+  done
+
   printf "%s" "$PATH" | tr ':' '\n' | while read -r dir; do
     [ -z "$dir" ] && continue
     [ -d "$dir" ] || continue
