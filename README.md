@@ -12,7 +12,7 @@ A focused, terminal UI for scanning Fail2Ban jails and unbanning IPs.
 ## Run
 
 ```bash
-cargo run
+sudo f2bs
 ```
 
 ## Install (from GitHub release)
