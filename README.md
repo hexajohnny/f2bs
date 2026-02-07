@@ -15,6 +15,18 @@ A focused, terminal UI for scanning Fail2Ban jails and unbanning IPs.
 cargo run
 ```
 
+## Install (from GitHub release)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/hexajohnny/f2bs/main/install.sh | sh
+```
+
+## Release Packaging
+
+```bash
+scripts/package-release.sh
+```
+
 ## Controls
 
 - `q`: quit
