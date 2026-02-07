@@ -7,6 +7,11 @@ A focused, terminal UI for scanning Fail2Ban jails and unbanning IPs.
 ## Features
 
 - Two-panel TUI (jails on the left, banned IPs on the right)
+- Remaining time shown next to banned IPs (when supported by fail2ban)
+- Jail detail panel with bantime/findtime/maxretry
+- Filter + sort for IP list
+- Auto-refresh toggle
+- Unban all with double confirmation
 - Keyboard and mouse support
 - Confirm prompt before unbanning
 - Works directly with `fail2ban-client`
@@ -27,8 +32,14 @@ curl -fsSL https://raw.githubusercontent.com/hexajohnny/f2bs/main/install.sh | s
 
 - `q`: quit
 - `r`: refresh
+- `t`: toggle auto-refresh
+- `/`: filter IP list (type, then `enter` to apply, `esc` to cancel)
+- `x`: clear filter
+- `s`: toggle sort (IP or time left)
+- `b`: ban an IP in the selected jail
 - `tab`: switch panels
 - `enter`: unban selected IP
+- `A`: unban all in selected jail (double confirm)
 - `y/n`: confirm/cancel unban
 - mouse click: select jail or IP, click Confirm/Cancel in modal
 
